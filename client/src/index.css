@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+  display: flex;
+  background-color: #faf9f8;
+}
+
+.icon {
+  margin-right: 20px;
+}
+
+.content {
+  margin-left: calc(228px + 20px);
+  margin-top: 60px;
+  min-height: calc(100vh - 60px);
+}

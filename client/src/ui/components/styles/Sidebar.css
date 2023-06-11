@@ -1,0 +1,94 @@
+/*
+  BARRA LATERAL
+  */
+
+.main-container {
+  width: 100%;
+  padding-right: 15px;
+  display: flex;
+  margin-top: calc(40px + 20px);
+}
+
+.barra-lateral {
+  background: #ffffff;
+  width: 280px;
+  height: 100vh;
+  min-height: 100vh;
+  position: fixed;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.barra-lateral a {
+  color: #000000;
+}
+
+/*
+  MENU
+*/
+.barra-lateral .menu a {
+  display: block;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255);
+  padding-left: 50px;
+}
+
+.barra-lateral .menu a:hover {
+  background: #f5f5f5;
+  text-decoration: none;
+}
+
+.barra-lateral .menu a.active {
+  background-color: #e1e7eb;
+}
+
+/*
+  MEDIAQUERIES
+*/
+
+@media screen and (max-width: 1300px) {
+  .barra-lateral {
+    min-width: auto;
+  }
+
+  .barra-lateral .logo {
+    display: none;
+  }
+
+  .barra-lateral .menu a span {
+    display: none;
+  }
+
+  .barra-lateral .menu a i {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .barra-lateral {
+    min-height: auto;
+  }
+
+  .barra-lateral .menu a {
+    display: inline-block;
+    border-bottom: none;
+  }
+
+  .main .widget form button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main .comentarios .comentario .foto {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main .comentarios .comentario .botones button {
+    width: 100%;
+  }
+}

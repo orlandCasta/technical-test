@@ -41,7 +41,7 @@ _A continuación se muestra un ejemplo de cómo puede iniciar la instalación y 
 
 1. Clone el repositorio
    ```sh
-   git clon git@github.com:orlandCasta/technical-test.git
+   git clone git@github.com:orlandCasta/technical-test.git
    ```
 2. Una vez se tenga, ingrese a la carpeta **technical-test**
    ```sh

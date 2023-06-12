@@ -22,6 +22,7 @@ const TaskFinished = props => {
     props.loadAllTasksFinishedRequest()
     props.loadAllTasksFinishedRequest()
   }
+
   return (
     <>
       <div className='page-info'>
@@ -30,7 +31,7 @@ const TaskFinished = props => {
         </div>
       </div>
       {finished.data.map(task => (
-        <div className='task-list'>
+        <div className='task-list' key={task._id}>
           <div className='task-list-container'>
             <div className='form-check finished'>
               <div>

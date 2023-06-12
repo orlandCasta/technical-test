@@ -6,10 +6,10 @@ import './styles/Sidebar.css'
 const Sidebar = () => {
   return (
     <>
-      <div class='main-container'>
-        <div class='row'>
-          <div class='barra-lateral col-12 col-sm-auto'>
-            <nav class='menu d-flex d-sm-block justify-content-center flex-wrap'>
+      <div className='main-container'>
+        <div className='row'>
+          <div className='barra-lateral col-12 col-sm-auto'>
+            <nav className='menu d-flex d-sm-block justify-content-center flex-wrap'>
               <NavLink className='nav-item nav-link' activeClassName='active' to='/'>
                 <Icons css='icon' icon={faCalendar} />
                 Mi día

@@ -13,6 +13,13 @@ const Navbar = props => {
     props.searchTaskRequest({ [fieldName]: value })
   }
 
+  const handleKeyDown = event => {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+  }
+
   return (
     <div className='navbar'>
       <div>
@@ -27,6 +34,7 @@ const Navbar = props => {
                   name='search'
                   placeholder='Buscar tareas pendientes'
                   onChange={event => handleInputChange('task', event)}
+                  onKeyDown={handleKeyDown}
                   value={search}
                 />
               </div>

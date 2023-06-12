@@ -37,10 +37,11 @@ const Tasks = props => {
     const { value } = e.target
     setEditedTask(value)
   }
+
   return (
     <>
       {list.data.map(task => (
-        <div className='task-list'>
+        <div className='task-list' key={task._id}>
           <div className='task-list-container'>
             <div className='form-check edit'>
               {editingTaskId === task._id ? (
@@ -52,7 +53,7 @@ const Tasks = props => {
                       value=''
                       id='flexCheckIndeterminate'
                       onClick={() => handleStatus(task._id, task.status)}
-                      checked={task.status}
+                      defaultChecked={task.status} // Cambio: Usar defaultChecked en lugar de checked
                     />
                     <input
                       type='text'
@@ -79,7 +80,7 @@ const Tasks = props => {
                       value=''
                       id='flexCheckIndeterminate'
                       onClick={() => handleStatus(task._id, task.status)}
-                      checked={task.status}
+                      defaultChecked={task.status} // Cambio: Usar defaultChecked en lugar de checked
                     />
                     <label className='form-check-label' htmlFor='flexCheckIndeterminate'>
                       {task.task}

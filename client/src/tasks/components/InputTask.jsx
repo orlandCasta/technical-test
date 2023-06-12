@@ -9,6 +9,7 @@ const InputTask = props => {
         task: ''
       }}
       onSubmit={(valores, { resetForm }) => {
+        if (valores.task === '') return
         props.createTaskRequest(valores)
         props.loadAllTasksRequest()
         props.loadAllTasksRequest()
@@ -23,8 +24,8 @@ const InputTask = props => {
               id='task'
               name='task'
               placeholder='Añadir tarea'
-              minlength='1'
-              maxlength='40'></Field>
+              minLength='1'
+              maxLength='40'></Field>
           </div>
         </Form>
       )}

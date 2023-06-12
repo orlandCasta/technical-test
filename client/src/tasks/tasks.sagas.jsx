@@ -56,7 +56,6 @@ export function* createTask({ payload }) {
     yield put(createTaskSuccess(data))
   } catch (error) {
     yield put(createTaskFailure(error))
-    console.log(error)
   }
 }
 
@@ -95,11 +94,9 @@ export function* updateTask({ id, payload }) {
 }
 
 export function* searchTasks({ payload }) {
-  console.log({ payload })
   try {
     const url = `http://localhost:5000/api/tasks/search/all/?task=${payload.task}`
     const { data } = yield call(axios.get, url)
-    console.log(data)
     yield put(searchTaskSuccess(data))
   } catch (error) {
     yield put(searchTaskFailure(error.message))
@@ -107,7 +104,6 @@ export function* searchTasks({ payload }) {
 }
 
 export function* changeStatusTask({ id, payload }) {
-  console.log(id, payload)
   try {
     const url = `http://localhost:5000/api/tasks/status/${id}`
     const { data } = yield call(axios.put, url, payload)

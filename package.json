@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "concurrently \"npm run backend-install\" \"npm run frontend-install\"",
     "backend-install": "cd api && npm install",
-    "frontend-install": "cd client && yand install",
+    "frontend-install": "cd client && yarn install",
     "start": "concurrently \"npm run backend\" \"npm run frontend\"",
     "backend": "cd api && nodemon server.js",
     "frontend": "cd client && yarn dev"

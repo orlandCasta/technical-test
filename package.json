@@ -1,0 +1,20 @@
+{
+  "name": "technical-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "concurrently \"npm run backend-install\" \"npm run frontend-install\"",
+    "backend-install": "cd api && npm install",
+    "frontend-install": "cd client && yand install",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd api && nodemon server.js",
+    "frontend": "cd client && yarn dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
